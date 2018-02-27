@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+  <div id="print"></div>
+<script>
+  const person = {
+    name: 'Pooya Golchian',
+    job: 'Web Developer',
+    city: 'Tehran',
+    bio: 'pooya is a really cool guy! Haha ...',
+  };
+
+  const markup = `
+    <div class="person">
+      <h2>
+        ${person.name}
+        <span class="job">${person.job}</span>
+      </h2>
+      <p class="location">${person.city}</p>
+      <p class="bio">${person.bio}</p>
+    </div>
+  `;
+
+  console.log(markup);
+  document.body.innerHTML = markup;
+  // document.querySelector('#print').innerHTML = markup;
+
+</script>
+</body>
+</html>

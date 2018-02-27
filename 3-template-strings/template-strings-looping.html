@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings!</title>
+</head>
+<body>
+  <div class="print"></div>
+<script>
+  const dogs = [
+    { name: 'a', age: 2 },
+    { name: 'b', age: 8 },
+    { name: 'c', age: 1 }
+  ];
+
+  // const markup = `
+  //   <ul class="dogs">
+  //     ${dogs.map(dog => `
+  //       <li>
+  //         ${dog.name}
+  //         is
+  //         ${dog.age * 7}
+  //       </li>`).join('')}
+  //   </ul>
+  // `;
+  // document.body.innerHTML = markup;
+
+
+
+
+const markup = ` 
+<ul class="dog">
+${dogs.map(dog => `<li>${dog.name} is ${dog.age  * 7 } </li>`).join('')}
+</ul>
+`
+
+document.querySelector('.print').innerHTML = markup;
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

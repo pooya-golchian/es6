@@ -20,7 +20,7 @@
     //  str += `${string} <span class="highlight">${values[i] || ''}</span>`;
     //});
     strings.forEach((string,i)=>{
-      str += `${string} <span class="highlight">${values[i] || ''}</span>`;
+      str += `${string}<span class="highlight">${values[i] || ''}</span>`;
     });
     return str;
   }
@@ -29,7 +29,7 @@
   const age = 3;
   const gender = 'male';
 
-  const sentence = highlight `My dog's name is ${name} and he is ${age} years old, and ${gender}` ;
+  const sentence = highlight`My dog's name is ${name} and he is ${age} years old, and ${gender}`;
   document.body.innerHTML = sentence;
   console.log(sentence);
 
